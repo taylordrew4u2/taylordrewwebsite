@@ -28,7 +28,7 @@ function audited() {
     },
     about: {
       photoAlt: byPath.get('about.photoAlt'),
-      body: ['Taylor Drew performs in New York City. Taylor is also a judge on Pins & Needles Comedy. She performs at festivals such as the Comedy Store, Skankfest, and League of Comics.']
+      body: ['Taylor Drew performs in New York City. Taylor is also a judge on Pins & Needles Comedy. She performs at festivals such as the Comedy Store, the Edinburgh Fringe, and League of Comics.']
     }
   };
 }

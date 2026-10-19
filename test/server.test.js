@@ -1057,7 +1057,7 @@ test('a pasted feed URL fills the wall with no Meta app at all', async () => {
           mediaUrl: 'https://cdn.example/one.mp4',
           thumbnailUrl: 'https://cdn.example/one.jpg',
           permalink: 'https://www.instagram.com/reel/ONE/',
-          caption: 'Roast battle #skankfest'
+          caption: 'Roast battle #roastbattle'
         }
       ])
     );
