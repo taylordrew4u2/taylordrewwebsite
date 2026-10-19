@@ -17,6 +17,7 @@ const seoCopy = require('./lib/seo-copy');
 const repair = require('./lib/repair');
 const proseRepair = require('./lib/prose-repair');
 const contentUpgrade = require('./lib/content-upgrade');
+const removeSkankfest = require('./lib/remove-skankfest');
 const aiProviders = require('./lib/ai-providers');
 
 const PORT = process.env.PORT === '0' ? 0 : Number(process.env.PORT) || 3000;
@@ -205,6 +206,7 @@ function ensureReady() {
       await repair.run(store);
       await proseRepair.run(store);
       await contentUpgrade.run(store);
+      await removeSkankfest.run(store);
     })().catch((err) => {
       readyPromise = null; // let a later request retry once the config is fixed
       throw err;

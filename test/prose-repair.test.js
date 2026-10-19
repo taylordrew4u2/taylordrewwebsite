@@ -8,7 +8,7 @@ const pr = require('../lib/prose-repair');
 // over, and a final sentence that merges three unrelated facts and then stops
 // mid-clause. The biography beside it, and the site's own gender field, both
 // say she.
-const DESCRIPTION = 'Taylor Drew is a New York City stand-up comedian who performs regularly at top NYC clubs. He has been featured at the Comedy Store in Los Angeles and festivals including Skankfest, Edinburgh Fringe, Laughing Buddha Comedy Festival. Taylor Drew won the Roast Battle competition at the League of Comics event. He also judges on SAG-Eligible performer Orange Is the New,';
+const DESCRIPTION = 'Taylor Drew is a New York City stand-up comedian who performs regularly at top NYC clubs. He has been featured at the Comedy Store in Los Angeles and festivals including Edinburgh Fringe, Laughing Buddha Comedy Festival. Taylor Drew won the Roast Battle competition at the League of Comics event. He also judges on SAG-Eligible performer Orange Is the New,';
 
 test('the description keeps her pronouns and loses the sentence that stops mid-clause', () => {
   const out = pr.repairDescription(DESCRIPTION, 'Female');
@@ -76,7 +76,7 @@ test('clean content is left exactly as it is', () => {
     seo: { description: 'Taylor Drew is a New York City stand-up comedian. Dates, clips and booking.' },
     brand: { gender: 'Female' },
     about: {
-      body: ['Taylor Drew performs stand-up in New York City.', 'She won the Skankfest Roast Battle in 2025.'],
+      body: ['Taylor Drew performs stand-up in New York City.', 'She won a Roast Battle in 2025.'],
       facts: [{ id: 'fact-base', label: 'Based in', value: 'New York City' }]
     }
   };

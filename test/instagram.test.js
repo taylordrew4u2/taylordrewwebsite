@@ -151,7 +151,7 @@ test('a hanging API gives up instead of hanging the page', async () => {
 
 test('a caption keeps its first line and drops the hashtag tail', () => {
   assert.strictEqual(instagram.captionText('Roast battle\n\nmore text'), 'Roast battle');
-  assert.strictEqual(instagram.captionText('Skankfest #comedy #standup'), 'Skankfest');
+  assert.strictEqual(instagram.captionText('Roast battle #comedy #standup'), 'Roast battle');
   assert.strictEqual(instagram.captionText(''), '');
   assert.strictEqual(instagram.captionText(null), '');
 });

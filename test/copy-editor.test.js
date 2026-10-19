@@ -299,8 +299,8 @@ test('copy that is already doing its job is not offered a rewrite', () => {
   const site = exampleSite();
   const good = [
     ['seo.title', 'Taylor Drew — NYC Stand-Up Comedian & Live Shows'],
-    ['seo.description', 'Taylor Drew is a New York City stand-up comedian, Skankfest Roast Battle winner and creator of Pins & Needles Comedy. Dates, clips and booking.'],
-    ['about.body.0', 'Taylor Drew is a stand-up comedian based in New York City. She performs regularly at clubs across the city and won the Skankfest Roast Battle in 2025.'],
+    ['seo.description', 'Taylor Drew is a New York City stand-up comedian, Roast Battle winner and creator of Pins & Needles Comedy. Dates, clips and booking.'],
+    ['about.body.0', 'Taylor Drew is a stand-up comedian based in New York City. She performs regularly at clubs across the city and won a Roast Battle in 2025.'],
     ['links.items.0.sublabel', 'Short performance clips'],
     // Short is usually right outside a search result. A good caption, title or
     // page heading is not a long one, and must not be nagged for length.
