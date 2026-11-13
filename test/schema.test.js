@@ -247,3 +247,12 @@ test('structured data publishes a clean identity even when the stored value is p
   assert.strictEqual(cleanPerson.address.addressLocality, 'Brooklyn');
   assert.strictEqual(cleanPerson.address.addressRegion, 'New York');
 });
+
+// Saving from the panel must not forget which one-time repairs already ran,
+// or the next boot reruns them over what was just saved.
+test('a save keeps the record of repairs that already ran', () => {
+  const current = normalizeSite({}, null);
+  current.meta.repairs = ['removeSkankfest@1', 'contentUpgrade@1'];
+  const next = normalizeSite({ shows: [] }, current);
+  assert.deepEqual(next.meta.repairs, ['removeSkankfest@1', 'contentUpgrade@1']);
+});
